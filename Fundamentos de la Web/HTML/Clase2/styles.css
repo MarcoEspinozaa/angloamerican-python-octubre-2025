@@ -1,0 +1,16 @@
+.contenedor {
+    display: flex;
+    background-color: lightcoral;
+}
+
+.columnas {
+    background-color: lime;
+}
+
+.imagenes {
+    background-color: red;
+}
+
+#tercera {
+    display: flex;
+}
