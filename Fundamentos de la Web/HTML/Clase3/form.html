@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <h1 style="text-align:center;">Formulario de Contacto</h1> <!--h1 sirve para poner el titulo principal -->
+    <p style="text-align: center;">¿Por qué contactarnos?</p> <!-- la p representa el parrafo -->
+    <p style="text-align: center;">Llena este formulario para consultas, sugerencias o información sobre actividades escolares </p>   
+      <form action="success.html"> <!-- es para hacer una tabla con datos -->
+        <label for="name">Nombres</label><br> <!--se utiliza para asociar un texto descriptivo  -->
+        <input type="text"><br><br> <!--utilizado para especificar el tipo de campo de entrada del usuario para interactuar en el formulario  -->
+        <label for="">Apellidos</label><br>
+        <input type="text"><br><br>
+        <label for="">Correo Eslectrónico</label><br>
+        <input type="email"><br><br>
+        <label for="">Número de Teléfono</label><br>
+        <input type="text"><br><br>
+        <label for="">Fecha de Contacto</label><br>
+        <input type="date"><br><br>
+         <br> <!-- sirve para insertar un salto de linea dentro del contenido --> 
+        
+        <label for=""><strong>Género:</strong></label><br>
+        <br>
+        <input type="radio"  name="Masculino">Masculino<br><br>
+        <input type="radio" name="Masculino">Femenino<br><br>
+        <input type="radio" name="Masculino">Otro<br><br>
+          <br> 
+
+        <label for=""><strong>Tipo de Consulta:</strong></label><br>
+        <br>
+        <input type="radio" name="Informacion">Información<br><br>
+        <input type="radio" name="Informacion">Reclamo<br><br>
+        <input type="radio" name="Informacion">Sugerencia<br><br>
+         <br>
+          
+         <label for=""><strong>Motivo de Contacto:</strong></label><br>
+         <br>
+         <input type="text" name="lista" list="motivo de contacto"><!--utiliza para asociar un campo de texto con una lista de opciones predefinidas--> 
+         <datalist id="smotivo de contacto"><!--sirve para definir una lista de opciones predefinidas-->
+            <option value="Consulta General">Consulta General</option>
+            <option value="Dudas Académicas">Dudas Académicas</option>
+            <option value="Consulta de Matricula">Consulta de Matricula</option>
+         </datalist>
+            <br><br>
+
+         <label for=""><strong>Adjuntar Documento:</strong></label><br> 
+         <br>
+         <input type="file">
+         <br><br>
+          
+         <label for=""><strong>Mensaje:</strong></label><br>
+         <textarea class="Respuesta" name="Respuesta" rows="5" cols="50" placeholder="Escribe tu mensaje aqui..."></textarea>
+         <br>
+         
+           <input type="submit" value="enviar">
+           <input type="submit" value="borrar">
+         <br>
+    
+             
+             <p style="text-align: center;">Volver al<a href="index.html"> Home</a></p><!--El style="text-align: center;" sirve para centar algo en este caso un parrafo-->
+             <p>&copy; 2025 Colegio Padre Damian | Todos los derechos reservado </p><!--El &copy sirve para crear el simbolo de copyright-->
+
+    </form>
+
+</body>
