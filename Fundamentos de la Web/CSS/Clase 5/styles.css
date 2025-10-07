@@ -1,0 +1,11 @@
+.contenedor  {
+    height: 200px;
+    background-color: yellow;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.imagen {
+    height: 50%;
+}
