@@ -1,0 +1,41 @@
+.container {
+    height: 80vh;
+    background-color: orange;
+    color: white;
+}
+
+.container-fluid {
+    height: 80vh;
+    background-color: pink;
+    color: white;
+}
+
+.caja1 {
+    height: 10vh;
+    background-color: red;
+}
+
+.caja2 {
+    height: 10vh;
+    background-color: blue;
+}
+
+.caja3 {
+    height: 10vh;
+    background-color: green;
+}
+
+.caja4 {
+    height: 30vh;
+    border: 1px solid black;
+}
+
+.caja5 {
+    height: 30vh;
+    border: 1px solid black;
+}
+
+.imagen {
+    height: 30vh;
+    border: 1px solid black;
+}
