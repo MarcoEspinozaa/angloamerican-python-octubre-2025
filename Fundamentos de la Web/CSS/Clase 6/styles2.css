@@ -3,7 +3,7 @@
     background-color: aqua;
 }
 
-/*.barra_arriba {
+.barra_arriba {
     height: 20vh;
     border: 1px solid black;
 }
@@ -18,17 +18,18 @@
     border: 1px solid black;
 }
 
-.cajas {
+.caja1 {
     height: 20vh;
     border: 1px solid black;
-}*/
-
-.caja1 {
-    height: 10vh;
-    background-color: red;
+    width: 60%;
 }
 
 .caja2 {
-    height: 10vh;
-    background-color: black;
+    height: 20vh;
+    border: 1px solid black;
+    width: 40%;
+}
+
+.row {
+    padding: 10px;
 }
