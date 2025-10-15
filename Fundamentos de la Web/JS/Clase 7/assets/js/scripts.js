@@ -65,7 +65,7 @@ if ((edad % 2) == 0) { /* edad modulo 2 es cero? */
 
 
 /* flujo control switch-case */
-const rol = 'auxiliar de aseo';
+const rol = 'inspector';
 
 switch (rol) {
     case 'estudiante':
@@ -90,11 +90,15 @@ const lista = [1,2,3,4,5,6];
 lista[4] /* retorna 5, posición 4 */
 
 /* objetos */
-const persona = {nombre: 'marco', edad: 34};
+const persona = {
+    nombre: 'marco', 
+    edad: 34,
+    direccion: 'wdfasdf',
+};
 persona['edad'] /* retorna la edad */
 
 let i = 0
-while(i<2) {
+while(i<6) {
     /*console.log(i);*/
     i++;
 }
@@ -118,6 +122,7 @@ for (let i=6; i < 10; i++) {
 
 /* el for permite continue y break */
 for (let i=0; i<6; i++) {
+
     if (i == 2) {
         continue; /* se salta el 2 */
     }
@@ -139,9 +144,21 @@ for (const numero of numeros) {
 /* Selectores */
 // getElementById: busca por el ID y devuelve el elemento
 
-const $titulo = document.getElementById('titulo');
+const titulo = document.getElementById('titulo');
+const clases = document.getElementsByClassName('parrafo');
+const ejemplo = document.getElementsByTagName('h1')
 
-/* querySelector: busca por selector CSS (clase, id, tag) retorna siempre el primer elemento que encuentre */
+/*console.log(titulo)
+console.log(clases)
+console.log(ejemplo)*/
+
+/* querySelector: busca por selector CSS, retorna siempre el primer elemento que encuentre. En palabras simples buscar el elemento tal cual lo hacen en CSS por ejemplo:  */
+
+const ejemplo2 = document.querySelector('#salida');
+const titulo2 = document.getElementById('titulo');
+
+/*console.log(ejemplo2)*/
+
 
 const boton = document.getElementById('btnSaludo');
 
@@ -150,28 +167,70 @@ const boton = document.getElementById('btnSaludo');
 //console.log(boton);
 
 boton.addEventListener('click', () => {
-    // funcion se va a ejecutar cuando el navegador detecte un click en el botón ($boton)
-    const mensaje = "haciendo click en el botón saludar";
-
-    console.log(mensaje);
+    console.log("haciendo click en el botón saludar");
+    alert("haciendo click al botón saludar.")
 });
 
 /* input */
 /* se escucha el evento input en el campo texto. */
+
+const contador = document.querySelector('#contador');
+
+const contador2 = document.getElementById('contador');
+
+console.log("contador con querySelector: ", contador)
+console.log("contador con getElementById: " , contador2)
+
+/* ===================== */
+let cuenta = 0
+const parrafo_contador = document.getElementById('cuenta');
+
+console.log("parrafo contador: " , parrafo_contador)
+
+contador.addEventListener('click', () => {
+    cuenta ++;
+    parrafo_contador.textContent = "Clicks: " + cuenta;
+});
+/* ====================== */
 
 const nombre = document.getElementById('txtNombre');
 const salida = document.getElementById('salida');
 
 /* el navegador pasa un objeto 'e' (evento) al callback */
 
-console.log(salida)
+/*console.log(salida)*/
 nombre.addEventListener('input', (e) => {
+    console.log(e.target);
 
-    salida.textContent = `Escribiendo contenido directamente: ${e.target.value}`;
+    salida.innerText = "Escribiendo contenido directamente: " + e.target.value;
+
+    console.log("Escribiendo contenido directamente: " + e.target.value + " y mostrando en consola")
 });
 
 
+/* ============== */
+const boton_color = document.getElementById('boton_color');
+const parrafo_color = document.getElementById('parrafo_color');
 
+console.log(boton_color);
+console.log(parrafo_color)
+
+boton_color.addEventListener('click', () => {
+    parrafo_color.style.color = 'red';
+    boton_color.style.display = 'none';
+});
+/* =============== */
+
+const mouse_color = document.getElementById('mouse_color');
+
+mouse_color.addEventListener('mouseenter', () => {
+    console.log("detectando el evento")
+    mouse_color.style.backgroundColor = 'blue';
+});
+
+mouse_color.addEventListener('mouseleave', () => {
+    mouse_color.style.backgroundColor = '';
+});
 
 
 
