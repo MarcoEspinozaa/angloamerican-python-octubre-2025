@@ -17,8 +17,8 @@
 
 # --- for sobre lista ---
 numeros = [10, 20, 30]
-for n in numeros:
-    print(n)
+for pepito in numeros:
+    print(pepito)
 # Salida:
 # 10
 # 20
@@ -33,8 +33,8 @@ for a, b in pares:
 # 3 4
 
 # --- for sobre cadena (caracter por caracter) ---
-for ch in "PY":
-    print(ch)
+for char in "PY":
+    print(char)
 # Salida:
 # P
 # Y
@@ -82,12 +82,13 @@ frutas = ["manzana", "pera", "uva"]
 for indice, fruta in enumerate(frutas):
     print(indice, fruta)
 # Salida:
-# 1 manzana
-# 2 pera
-# 3 uva
+# 0 manzana
+# 1 pera
+# 2 uva
 
 # --- zip(lista1, lista2, ...) ---
 # Recorre en paralelo varios iterables (se detiene en el más corto)
+frutas = ["manzana", "pera", "uva"]
 precios = [1000, 1200, 900]
 for fruta, precio in zip(frutas, precios):
     print(fruta, "->", precio)
@@ -154,6 +155,7 @@ pares = []
 for num in lista:
     if num % 2 == 0:
         pares.append(num)
+        print(num)
 print("Pares ->", pares)  # -> [2, 4, 6]
 
 # 3) Bucle con “palabra de corte”
