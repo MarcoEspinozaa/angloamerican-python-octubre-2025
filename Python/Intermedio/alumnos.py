@@ -39,9 +39,5 @@ for alumno in estudiantes:
         mejor_nombre = alumno["nombre"]
 
 print(f"El promedio más alto es del estudiante {mejor_nombre} con un promedio de {mejor_promedio}")
-
-
-    
-
     
     
